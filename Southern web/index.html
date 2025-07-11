@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Southern Copper Corporation</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Redes sociales header */
+        .social-icons-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-left: auto;
+        }
+        .social-icons-header a {
+            font-size: 1.35em;
+            color: #222;
+            transition: color 0.2s;
+        }
+        .social-icons-header a:hover {
+            color: #e30613;
+        }
+
+        /* Sección operaciones */
+        .operaciones-section {
+            width: 100%;
+            background: #f6f6f8;
+            padding: 56px 0 40px 0;
+        }
+        .operaciones-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #313131;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+        .operaciones-desc {
+            text-align: center;
+            font-size: 1.08rem;
+            color: #555;
+            margin-bottom: 36px;
+        }
+        .operaciones-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+            gap: 30px;
+        }
+        .op-card {
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 18px 0 rgba(61,62,80,0.09), 0 1.5px 5px 0 rgba(0,0,0,0.04);
+            transition: box-shadow 0.2s, transform 0.18s;
+            padding: 32px 28px 25px 28px;
+            position: relative;
+            min-height: 280px;
+        }
+        .op-card:hover {
+            box-shadow: 0 6px 24px 0 rgba(20,119,201,0.16), 0 3px 12px 0 rgba(61,62,80,0.11);
+            transform: translateY(-6px) scale(1.025);
+        }
+        .op-icon {
+            font-size: 2.3em;
+            color: #e30613;
+            margin-bottom: 10px;
+        }
+        .op-title {
+            font-size: 1.19rem;
+            font-weight: 700;
+            color: #1477c9;
+            margin-bottom: 9px;
+        }
+        .op-subtitle {
+            font-size: 1.04rem;
+            font-weight: 600;
+            color: #e30613;
+            margin-bottom: 7px;
+        }
+        .op-list {
+            margin: 0;
+            padding-left: 18px;
+            color: #444;
+            font-size: 0.98rem;
+        }
+        .op-list li {
+            margin-bottom: 3px;
+        }
+        /* Responsive tweaks */
+        @media (max-width: 800px) {
+            .operaciones-grid { grid-template-columns: 1fr; }
+            .op-card { min-height: unset; }
+        }
+        body { background: #f8f8fb }
+    </style>
+    <!-- ICONOS FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+</head>
+<body class="page-transition">
+    <header>
+        <div style="display:flex;align-items:center;gap:24px;padding-right:12px;">
+            <div class="logo" onclick="window.location.href='index.html'" style="cursor:pointer;">SouthernCopperCorporation</div>
+            <div class="social-icons-header" style="margin-left:auto;">
+                <a href="https://www.facebook.com/southernperucoppercorporation/?locale=es_LA" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://x.com/southernperugm?lang=es" target="_blank" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://pe.linkedin.com/company/southern-peru-copper-corporation" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.youtube.com/user/WebmasterSPCC" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        <nav>
+            <ul class="main-menu">
+                <li>
+                    <a href="#">NOSOTROS</a>
+                    <ul class="submenu">
+                        <li><a href="acerca.html">Acerca de SCC</a></li>
+                        <li><a href="estructura.html">Estructura Corporativa</a></li>
+                        <li><a href="historia.html">Historia</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">DESARROLLO SUSTENTABLE</a>
+                    <ul class="submenu">
+                        <li><a href="compromiso.html"><strong>NUESTRO COMPROMISO</strong></a></li>
+                        <li><a href="desarrollo.html">IMPULSANDO EL DESARROLLO</a></li>
+                        <li><a href="seguridad.html">SEGURIDAD Y SALUD</a></li>
+                        <li><a href="innovacion.html">INNOVACIÓN Y CUIDADO DEL AGUA</a></li>
+                        <li><a href="clima.html">CAMBIO CLIMÁTICO</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">INVERSIONISTAS</a>
+                    <ul class="submenu">
+                        <li><a href="InfoFinanciera.html">Información Financiera</a></li>
+                        <li><a href="precioacciones.html">Precio de la acción / Bolsa</a></li>
+                        <li><a href="gobcorporativo.html">Gobierno Corporativo</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section class="slider-section">
+        <div class="slider" id="slider">
+            <div class="slide active">
+                <img src="images/hero1.jpg" alt="Imagen 1">
+            </div>
+            <div class="slide">
+                <img src="images/hero2.jpg" alt="Imagen 2">
+            </div>
+            <div class="slide">
+                <img src="images/hero3.jpg" alt="Imagen 3">
+            </div>
+        </div>
+        <div class="slider-text">
+            <div class="text-main">
+                "Minería que impulsa el progreso, con responsabilidad,
+            </div>
+            <div class="text-sub">
+                innovación y compromiso con el futuro."
+            </div>
+        </div>
+        <div class="slider-controls" id="slider-controls">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+
+    <!-- SECCIÓN OPERACIONES Y PROYECTOS -->
+    <section class="operaciones-section">
+        <div class="operaciones-title">Operaciones y Proyectos Destacados</div>
+        <div class="operaciones-desc">
+            Southern Perú Copper Corporation (SPCC) opera minas de cobre y oro, plantas metalúrgicas y desarrolla importantes proyectos de expansión en el Perú.
+        </div>
+        <div class="operaciones-grid">
+            <div class="op-card">
+                <div class="op-icon"><i class="fas fa-mountain"></i></div>
+                <div class="op-title">Operaciones Mineras</div>
+                <ul class="op-list">
+                    <li>
+                        <span class="op-subtitle">Toquepala:</span>
+                        Ubicada en Tacna, es una mina de cobre a tajo abierto con una planta concentradora.
+                    </li>
+                    <li>
+                        <span class="op-subtitle">Cuajone:</span>
+                        Situada en Moquegua, también es una mina de cobre a tajo abierto con su propia planta concentradora.
+                    </li>
+                    <li>
+                        <span class="op-subtitle">Tantahuatay:</span>
+                        Opera en Cajamarca, enfocada en la producción de oro en colaboración con Buenaventura.
+                    </li>
+                </ul>
+            </div>
+            <div class="op-card">
+                <div class="op-icon"><i class="fas fa-industry"></i></div>
+                <div class="op-title">Operaciones Metalúrgicas</div>
+                <ul class="op-list">
+                    <li>
+                        <span class="op-subtitle">Fundición de Ilo:</span>
+                        Procesa concentrados de cobre de las minas Toquepala y Cuajone, y también recibe concentrados de terceros.
+                    </li>
+                    <li>
+                        <span class="op-subtitle">Refinería de Ilo:</span>
+                        Refina el cobre proveniente de la fundición.
+                    </li>
+                </ul>
+            </div>
+            <div class="op-card">
+                <div class="op-icon"><i class="fas fa-rocket"></i></div>
+                <div class="op-title">Proyectos Futuros</div>
+                <ul class="op-list">
+                    <li>
+                        <span class="op-subtitle">Tía María:</span>
+                        Un proyecto de mina de cobre y molibdeno en Arequipa.
+                    </li>
+                    <li>
+                        <span class="op-subtitle">Los Chancas:</span>
+                        Otro proyecto de mina de cobre y molibdeno.
+                    </li>
+                    <li>
+                        <span class="op-subtitle">Michiquillay:</span>
+                        Un proyecto de mina de cobre en Cajamarca.
+                    </li>
+                    <li>
+                        <span class="op-subtitle">Ampliación de la Fundición de Ilo:</span>
+                        Se busca aumentar la capacidad de procesamiento de concentrados de cobre.
+                    </li>
+                    <li>
+                        <span class="op-subtitle">Ampliación de Cuajone:</span>
+                        Se evalúa una segunda expansión de la mina Cuajone.
+                    </li>
+                </ul>
+            </div>
+            <div class="op-card">
+                <div class="op-icon"><i class="fas fa-users"></i></div>
+                <div class="op-title">Estructura Empresarial</div>
+                <ul class="op-list">
+                    <li>
+                        SPCC es subsidiaria de <span style="color:#1477c9;font-weight:600;">Southern Copper Corporation (SCC)</span>.<br>
+                        SCC es propiedad de <span style="color:#e30613;font-weight:600;">Grupo México</span>.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+  
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!-- Noticas Mapa contacto -->
+<section class="extras-section">
+    <div class="extras-grid">
+        <!-- Noticias -->
+        <div class="extra-card news-card">
+            <div class="extra-icon"><i class="fas fa-newspaper"></i></div>
+            <div class="extra-title">Últimas Noticias</div>
+            <div class="extra-news-list">
+                <a href="#" class="extra-news-item">
+                    <span class="news-dot"></span>
+                    Southern Perú anuncia ampliación de la fundición de Ilo.
+                </a>
+                <a href="#" class="extra-news-item">
+                    <span class="news-dot"></span>
+                    Reconocimiento internacional a su gestión ambiental.
+                </a>
+                <a href="#" class="extra-news-item">
+                    <span class="news-dot"></span>
+                    Nueva inversión social en comunidades de Tacna.
+                </a>
+            </div>
+            <a href="#" class="extra-link">Ver todas las noticias <i class="fas fa-angle-right"></i></a>
+        </div>
+
+        <!-- Mapa de Operaciones -->
+        <div class="extra-card map-card">
+            <div class="extra-icon"><i class="fas fa-map-marked-alt"></i></div>
+            <div class="extra-title">Mapa de Operaciones</div>
+            <div class="extra-map-img">
+                <!-- <img src="images/mapa-peru-op.jpg" alt="Mapa de Operaciones" /> -->
+                <a href="#" class="map-btn">Ver mapa interactivo</a>
+            </div>
+            <div class="extra-desc">
+                Explora nuestras minas, plantas y proyectos estratégicos a lo largo del territorio peruano.
+            </div>
+        </div>
+
+
+<div class="mapa-iframe-container">
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3894.061909612223!2d-71.34079998519058!3d-17.64786068783205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f8832c5c0e7e9%3A0x1e9a3d7cf1e6a3cf!2sSouthern%20Per%C3%BA%20Copper%20Corporation!5e0!3m2!1ses-419!2spe!4v1687380900000!5m2!1ses-419!2spe" 
+    width="100%" 
+    height="320" 
+    style="border:0;border-radius:10px;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+
+
+
+
+
+        <!-- Contacto -->
+        <div class="extra-card contact-card">
+            <div class="extra-icon"><i class="fas fa-envelope-open-text"></i></div>
+            <div class="extra-title">Contáctanos</div>
+            <form class="contact-form" onsubmit="alert('¡Mensaje enviado!');return false;">
+                <input type="text" placeholder="Nombre" required>
+                <input type="email" placeholder="Correo" required>
+                <textarea placeholder="Mensaje" rows="3" required></textarea>
+                <button type="submit"><i class="fas fa-paper-plane"></i> Enviar</button>
+            </form>
+            <div class="extra-desc">
+                O también escríbenos a <a href="mailto:contactoejmXD@southernperu.com">contactoXD@southernperu.com</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+<!-- Noticias mapas contacto -->
+<style>
+.extras-section {
+    background: #f4f6fa;
+    padding: 56px 0 46px 0;
+}
+.extras-grid {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    gap: 38px;
+}
+.extra-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 18px 0 rgba(61,62,80,0.09), 0 1.5px 5px 0 rgba(0,0,0,0.04);
+    transition: box-shadow 0.22s, transform 0.18s;
+    padding: 34px 28px 30px 28px;
+    min-height: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    overflow: hidden;
+}
+.extra-card:hover {
+    box-shadow: 0 8px 30px 0 rgba(20,119,201,0.16), 0 6px 18px 0 rgba(61,62,80,0.11);
+    transform: translateY(-8px) scale(1.028);
+}
+.extra-icon {
+    font-size: 2.2em;
+    color: #1477c9;
+    margin-bottom: 12px;
+    transition: color 0.18s;
+}
+.extra-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 14px;
+}
+.extra-news-list {
+    margin-bottom: 20px;
+}
+.extra-news-item {
+    display: flex;
+    align-items: center;
+    color: #444;
+    margin-bottom: 7px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.17s;
+}
+.extra-news-item:hover {
+    color: #1477c9;
+    text-decoration: underline;
+}
+.news-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 8px;
+    border-radius: 50%;
+    background: #1477c9;
+}
+.extra-link {
+    color: #1477c9;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+    transition: color 0.18s;
+}
+.extra-link:hover { color: #e30613; }
+.extra-map-img {
+    margin-bottom: 16px;
+    text-align: center;
+    position: relative;
+}
+.extra-map-img img {
+    width: 100%;
+    max-width: 290px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(20,119,201,0.08);
+    margin-bottom: 8px;
+    transition: transform 0.18s;
+}
+.extra-map-img img:hover {
+    transform: scale(1.025) rotate(-1deg);
+}
+.map-btn {
+    display: inline-block;
+    background: #1477c9;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 6px 15px;
+    font-size: 0.97rem;
+    margin-top: 4px;
+    box-shadow: 0 2px 8px rgba(20,119,201,0.08);
+    text-decoration: none;
+    transition: background 0.13s;
+}
+.map-btn:hover { background: #e30613; }
+.extra-desc {
+    font-size: 0.99rem;
+    color: #666;
+    margin-top: 12px;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+.contact-form input, .contact-form textarea {
+    border: 1.3px solid #d8e0ea;
+    border-radius: 4px;
+    padding: 9px 10px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.18s, box-shadow 0.18s;
+}
+.contact-form input:focus, .contact-form textarea:focus {
+    border: 1.3px solid #1477c9;
+    box-shadow: 0 2px 8px rgba(20,119,201,0.09);
+}
+.contact-form button {
+    background: #1477c9;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 0 8px 0;
+    font-size: 1.06rem;
+    cursor: pointer;
+    transition: background 0.15s;
+    margin-top: 2px;
+}
+.contact-form button:hover { background: #e30613; }
+@media (max-width: 900px) {
+    .extras-grid { grid-template-columns: 1fr; }
+    .extra-card { min-height: unset; }
+}
+</style>
+
+
+
+
+
+
+
+
+
+  <footer>
+        <span>© 2025 Southern Copper Corporation. Todos los derechos reservados.</span>
